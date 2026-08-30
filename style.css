@@ -766,3 +766,42 @@ body {
     background-color: #f4f4f6; /* Fondo suave que combina con la insignia */
     padding: 15px;
 }
+
+/* Color característico para proyectos 3D (Borde y resplandor violeta) */
+.modal-card.theme-3d {
+    border-top: 4px solid #8b5cf6;
+    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+}
+
+/* Controles del Carrusel sobre la imagen */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    pointer-events: none;
+}
+
+.btn-carousel {
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    pointer-events: all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.btn-carousel:hover {
+    background: rgba(139, 92, 246, 0.8);
+    transform: scale(1.1);
+}

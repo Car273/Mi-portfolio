@@ -154,17 +154,20 @@
 </div>
 
             <!-- 2. Modelado 3D -->
-            <article class="project-card" data-category="3d">
-                <div class="card-gradient"></div>
-                <div class="card-tag">3D Design & Render</div>
-                <h3>Colección de Modelos 3D</h3>
-                <p>Escenas, activos tridimensionales, iluminación y entornos detallados renderizados en Blender / WebGL.</p>
-                <div class="tech-stack">
-                    <span>Blender</span>
-                    <span>Three.js</span>
-                </div>
-                <a href="#" class="card-link">Explorar Galería 3D &rarr;</a>
-            </article>
+             <!-- TARJETA DE MODELADO 3D -->
+<article class="project-card" data-category="3d">
+    <div class="card-gradient"></div>
+    <div class="card-tag">3D & Graphic Design</div>
+    <h3>Visualización 3D & Entornos</h3>
+    <p>Modelado de objetos, iluminación de escenas y renderizado de entornos virtuales interactivos.</p>
+    <div class="tech-stack">
+        <span>Blender</span>
+        <span>Three.js</span>
+        <span>WebGL</span>
+    </div>
+    <!-- Botón que abre el anuncio del proyecto 3D -->
+    <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('modelado3d')">Ver detalles &rarr;</button>
+</article>
 
             <!-- 3. Fotografía -->
             <article class="project-card" data-category="foto">
@@ -232,6 +235,32 @@
             </a>
         </div>
     </section>
+
+    <!-- MODAL / ANUNCIO CON NAVEGACIÓN -->
+<div id="anuncio-modal" class="modal-overlay" onclick="cerrarAnuncioAfuera(event)">
+    <div class="modal-card" id="modal-card-content">
+        <button type="button" class="modal-close" onclick="cerrarAnuncioDirecto()">&times;</button>
+        
+        <div class="modal-image-wrapper">
+            <img id="modal-img" src="" alt="Vista previa 3D">
+            
+            <!-- Botones de carrusel dentro de la imagen -->
+            <div id="modal-carousel-controls" class="carousel-controls">
+                <button type="button" class="btn-carousel" onclick="cambiarModelo(-1)">&10094;</button>
+                <button type="button" class="btn-carousel" onclick="cambiarModelo(1)">&10095;</button>
+            </div>
+        </div>
+
+        <div class="modal-body">
+            <h3 id="modal-title">Título</h3>
+            <p id="modal-desc">Descripción...</p>
+            
+            <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
+                Ver Render / Demo &rarr;
+            </a>
+        </div>
+    </div>
+</div>
 
     <script src="script.js"></script>
 </body>
