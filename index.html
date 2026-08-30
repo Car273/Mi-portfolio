@@ -9,15 +9,29 @@
 <body>
 
     <!-- Navegación -->
-    <nav class="navbar">
-        <div class="logo">ISAI COR</div>
-        <ul class="nav-links">
-            <li><a href="#hero">Inicio</a></li>
-            <li><a href="#universidad">Universidad</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <header class="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="logo">Isai<span>.</span></a>
+        
+        <!-- Botón Hamburguesa para Mobile -->
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#timeline" class="nav-link">Trayectoria</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link nav-cta-mobile">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <a href="#contact" class="btn-contact-desktop">Contacto</a>
+    </div>
+</header>
 
     <!-- 1. INDEX / PRESENTACIÓN -->
     <section id="index" class="hero-section">

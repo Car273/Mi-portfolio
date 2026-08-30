@@ -51,3 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Menú Hamburguesa en versión móvil
+const mobileMenuBtn = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+if (mobileMenuBtn && navMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuBtn.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+
+    // Cerrar el menú automáticamente al hacer clic en cualquier opción
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuBtn.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+}
