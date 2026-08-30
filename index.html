@@ -118,18 +118,18 @@
             
             <!-- 1. Proyecto Web: Gestión de Departamentos -->
             <article class="project-card" data-category="web">
-                <div class="card-gradient"></div>
-                <div class="card-tag">Web & Real Estate</div>
-                <h3>Gestión de Departamentos</h3>
-                <p>Plataforma web para la gestión y presentación interactiva de propiedades y alquileres familiares.</p>
-                <div class="tech-stack">
-                    <span>PHP</span>
-                    <span>MySQL</span>
-                    <span>HTML/CSS</span>
-                </div>
-                <!-- Al dar clic abre el modal tipo anuncio -->
-                <button type="button" class="card-link" onclick="openProjectModal('deptos')">Ver detalles &rarr;</button>
-            </article>
+    <div class="card-gradient"></div>
+    <div class="card-tag">Web & Real Estate</div>
+    <h3>Gestión de Departamentos</h3>
+    <p>Plataforma web para la gestión y presentación interactiva de propiedades y alquileres familiares.</p>
+    <div class="tech-stack">
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>HTML/CSS</span>
+    </div>
+    <!-- Botón con la función correspondiente -->
+    <button type="button" class="btn-modal-trigger" onclick="abrirModalProyecto('deptos')">Ver detalles &rarr;</button>
+</article>
 
             <!-- Otros proyectos... -->
 
@@ -137,28 +137,38 @@
     </section>
 
     <!-- MODAL TIPO ANUNCIO / VENTANA FLOTANTE -->
-    <div id="project-modal" class="modal-overlay" onclick="closeProjectModal(event)">
+    <div id="project-modal" class="modal-overlay" onclick="cerrarModalAfuera(event)">
         <div class="modal-card" id="modal-card-content">
-            <button class="modal-close" onclick="closeProjectModalDirect()">&times;</button>
+            <button type="button" class="modal-close" onclick="cerrarModalDirecto()">&times;</button>
             
-            <!-- 1. Imagen de referencia -->
             <div class="modal-image-wrapper">
-                <img id="favicon" src="" alt="Vista previa del proyecto">
+                <img id="img/favicon." src="" alt="Vista previa del proyecto">
             </div>
 
-            <!-- Contenido -->
             <div class="modal-body">
                 <h3 id="modal-title">Título del Proyecto</h3>
-                <!-- 2. Breve descripción -->
                 <p id="modal-desc">Descripción del proyecto...</p>
                 
-                <!-- 3. Link directo al sitio -->
                 <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
-                    Visitar Sitio / Ver Demo Directa &rarr;
+                    Visitar Sitio Directo &rarr;
                 </a>
             </div>
         </div>
     </div>
+
+    <article class="project-card" data-category="web">
+    <div class="card-gradient"></div>
+    <div class="card-tag">Web & Real Estate</div>
+    <h3>Departamentos Cortázar</h3>
+    <p>Plataforma web para la gestión, arquitectura visual y presentación interactiva de propiedades familiares.</p>
+    <div class="tech-stack">
+        <span>PHP</span>
+        <span>MySQL</span>
+        <span>HTML/CSS</span>
+    </div>
+    <!-- Botón que activa la ventanita flotante -->
+    <button type="button" class="btn-modal-trigger" onclick="abrirModalProyecto('deptos')">Ver detalles &rarr;</button>
+</article>
 
             <!-- 2. Modelado 3D -->
             <article class="project-card" data-category="3d">

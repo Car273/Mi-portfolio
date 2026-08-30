@@ -494,8 +494,7 @@ body {
         background-color: #2b2b2b;
         border-radius: 10px;
         transition: all 0.3s ease;
-    }
-
+        }
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -563,8 +562,7 @@ body {
     }
 }
 
-/* ==========================================
-   MODAL TIPO ANUNCIO / FLOTANTE
+/* ==========================================   MODAL TIPO ANUNCIO / VENTANA FLOTANTE
    ========================================== */
 .modal-overlay {
     position: fixed;
@@ -607,12 +605,13 @@ body {
     transform: translateY(0) scale(1);
 }
 
-/* 4. Color característico dinámico mediante borde superior y resplandor */
+        /* Color característico dinámico (Borde superior & resplandor) */
 .modal-card.theme-deptos {
-    border-top: 4px solid #3b82f6; /* Azul característico para departamentos */
+    border-top: 4px solid #3b82f6; /* Azul brillante para departamentos */
     box-shadow: 0 10px 30px rgba(59, 130, 246, 0.25);
 }
 
+/* Botón para cerrar (X) */
 .modal-close {
     position: absolute;
     top: 15px;
@@ -636,6 +635,7 @@ body {
     background: rgba(255, 255, 255, 0.2);
 }
 
+/* Imagen de referencia */
 .modal-image-wrapper {
     width: 100%;
     height: 220px;
@@ -649,6 +649,7 @@ body {
     object-fit: cover;
 }
 
+/* Contenido interno */
 .modal-body {
     padding: 25px;
 }
@@ -673,4 +674,31 @@ body {
     padding: 12px;
     text-decoration: none;
     border-radius: 10px;
+}
+
+/* Estilo para el botón desencadenador dentro de la tarjeta */
+.btn-modal-trigger {
+    background: transparent;
+    border: none;
+    color: #3b82f6;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: color 0.2s ease;
+}
+
+.btn-modal-trigger:hover {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+/* Borde superior y resplandor azul dinámico para el proyecto */
+.modal-card.theme-deptos {
+    border-top: 4px solid #2563eb; 
+    box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
 }
