@@ -3,58 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isai cor | Portafolio Personal</title>
+    <title>Isai Cor | Portafolio Personal</title>
+    
+    <!-- Open Graph para vista previa en redes sociales -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Isai Cor | Portafolio Personal">
+    <meta property="og:description" content="Portafolio personal de desarrollo web, gráficos 3D e interfaces interactivas.">
+    <meta property="og:image" content="preview.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Navegación -->
+    <!-- Navegación Base -->
     <header class="navbar">
-    <div class="nav-container">
-        <a href="#hero" class="logo">Isai<span>.</span></a>
-        
-        <!-- Botón Hamburguesa para Mobile -->
-        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menú">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </button>
+        <div class="nav-container">
+            <a href="#hero" class="logo">Isai Cor<span>.</span></a>
+            
+            <!-- Botón Hamburguesa Móvil -->
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
 
-        <nav class="nav-menu">
-            <ul class="nav-links">
-                <li><a href="#hero" class="nav-link">Inicio</a></li>
-                <li><a href="#timeline" class="nav-link">Trayectoria</a></li>
-                <li><a href="#projects" class="nav-link">Proyectos</a></li>
-                <li><a href="#contact" class="nav-link nav-cta-mobile">Contacto</a></li>
-            </ul>
-        </nav>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="#timeline" class="nav-link">Trayectoria</a></li>
+                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link nav-cta-mobile">Contacto</a></li>
+                </ul>
+            </nav>
 
-        <a href="#contact" class="btn-contact-desktop">Contacto</a>
-    </div>
-</header>
-
-    <!-- 1. INDEX / PRESENTACIÓN -->
-    <section id="index" class="hero-section">
-        <div class="hero-content">
-            <h1>Ingeniería & Desarrollo Digital</h1>
-            <p>Creando experiencias interactivas, software y diseño futurista.</p>
-            <a href="#proyectos" class="btn-primary">Ver Trabajos</a>
+            <a href="#contact" class="btn-contact-desktop">Contacto</a>
         </div>
-        <div class="hero-canvas-container">
-            <!-- Espacio listo para la esfera/malla fluida en 3D -->
-            <div class="fluid-orb"></div>
+    </header>
+
+    <!-- 1. HERO / PRESENTACIÓN -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Ingeniería & Desarrollo Digital</h1>
+                <p>Creando experiencias interactivas, software y diseño futurista.</p>
+                <a href="#projects" class="btn-primary">Ver Trabajos</a>
+            </div>
+            <div class="hero-canvas-container">
+                <!-- Esfera fluida CSS / Espacio para Canvas 3D -->
+                <div class="fluid-orb"></div>
+            </div>
         </div>
     </section>
 
-    <!-- 2. DESARROLLO UNIVERSITARIO -->
-    <section id="universidad" class="section-container">
+    <!-- 2. TRAYECTORIA ACADÉMICA (id="timeline") -->
+    <section id="timeline" class="section-container">
         <h2>Trayectoria Académica</h2>
         
         <div class="timeline-wrapper">
-            <!-- Línea vertical de fondo -->
             <div class="timeline-line"></div>
 
-            <!-- Nodo 1 -->
+            <!-- Nodos interactivos -->
             <div class="timeline-node active" onclick="selectNode(this)">
                 <div class="node-dot"></div>
                 <div class="node-content">
@@ -64,7 +72,6 @@
                 </div>
             </div>
 
-            <!-- Nodo 2 -->
             <div class="timeline-node" onclick="selectNode(this)">
                 <div class="node-dot"></div>
                 <div class="node-content">
@@ -74,7 +81,6 @@
                 </div>
             </div>
 
-            <!-- Nodo 3 -->
             <div class="timeline-node" onclick="selectNode(this)">
                 <div class="node-dot"></div>
                 <div class="node-content">
@@ -84,7 +90,6 @@
                 </div>
             </div>
 
-            <!-- Nodo 4 -->
             <div class="timeline-node" onclick="selectNode(this)">
                 <div class="node-dot"></div>
                 <div class="node-content">
@@ -96,12 +101,11 @@
         </div>
     </section>
 
-    <!-- 3. PROYECTOS DESTACADOS -->
-    <section id="proyectos" class="section-container">
-
+    <!-- 3. PROYECTOS DESTACADOS (id="projects") -->
+    <section id="projects" class="section-container">
         <h2>Mis Proyectos</h2>
         
-        <!-- Filtros interactivos -->
+        <!-- Filtros de categoría -->
         <div class="project-filters">
             <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
             <button class="filter-btn" onclick="filterProjects('web')">Web & Software</button>
@@ -112,21 +116,52 @@
 
         <div class="projects-grid">
             
-            <!-- 1. Proyecto Web: Sitio de Departamentos -->
-            <div class="project-card" data-category="web">
+            <!-- 1. Proyecto Web: Gestión de Departamentos -->
+            <article class="project-card" data-category="web">
                 <div class="card-gradient"></div>
                 <div class="card-tag">Web & Real Estate</div>
                 <h3>Gestión de Departamentos</h3>
                 <p>Plataforma web para la gestión y presentación interactiva de propiedades y alquileres familiares.</p>
                 <div class="tech-stack">
-                    <span>PHP / HTML / CSS</span>
-                    <span>Database</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                    <span>HTML/CSS</span>
                 </div>
-                <a href="#" class="card-link">Ver detalles &rarr;</a>
+                <!-- Al dar clic abre el modal tipo anuncio -->
+                <button type="button" class="card-link" onclick="openProjectModal('deptos')">Ver detalles &rarr;</button>
+            </article>
+
+            <!-- Otros proyectos... -->
+
+        </div>
+    </section>
+
+    <!-- MODAL TIPO ANUNCIO / VENTANA FLOTANTE -->
+    <div id="project-modal" class="modal-overlay" onclick="closeProjectModal(event)">
+        <div class="modal-card" id="modal-card-content">
+            <button class="modal-close" onclick="closeProjectModalDirect()">&times;</button>
+            
+            <!-- 1. Imagen de referencia -->
+            <div class="modal-image-wrapper">
+                <img id="favicon" src="" alt="Vista previa del proyecto">
             </div>
 
+            <!-- Contenido -->
+            <div class="modal-body">
+                <h3 id="modal-title">Título del Proyecto</h3>
+                <!-- 2. Breve descripción -->
+                <p id="modal-desc">Descripción del proyecto...</p>
+                
+                <!-- 3. Link directo al sitio -->
+                <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
+                    Visitar Sitio / Ver Demo Directa &rarr;
+                </a>
+            </div>
+        </div>
+    </div>
+
             <!-- 2. Modelado 3D -->
-            <div class="project-card" data-category="3d">
+            <article class="project-card" data-category="3d">
                 <div class="card-gradient"></div>
                 <div class="card-tag">3D Design & Render</div>
                 <h3>Colección de Modelos 3D</h3>
@@ -136,10 +171,10 @@
                     <span>Three.js</span>
                 </div>
                 <a href="#" class="card-link">Explorar Galería 3D &rarr;</a>
-            </div>
+            </article>
 
             <!-- 3. Fotografía -->
-            <div class="project-card" data-category="foto">
+            <article class="project-card" data-category="foto">
                 <div class="card-gradient"></div>
                 <div class="card-tag">Visual & Media</div>
                 <h3>Galería Fotográfica</h3>
@@ -149,10 +184,10 @@
                     <span>Edición Digital</span>
                 </div>
                 <a href="#" class="card-link">Ver Fotografías &rarr;</a>
-            </div>
+            </article>
 
             <!-- 4. Bocetos y Dibujos -->
-            <div class="project-card" data-category="arte">
+            <article class="project-card" data-category="arte">
                 <div class="card-gradient"></div>
                 <div class="card-tag">Illustration & Concept</div>
                 <h3>Bocetos & Ilustración</h3>
@@ -162,14 +197,13 @@
                     <span>Concept Art</span>
                 </div>
                 <a href="#" class="card-link">Ver Dibujos &rarr;</a>
-            </div>
+            </article>
 
         </div>
-
     </section>
 
-    <!-- 4. CONTACTO -->
-    <section id="contacto" class="section-container">
+    <!-- 4. SECCIÓN CONTACTO (id="contact") -->
+    <section id="contact" class="section-container">
         <div class="contact-header">
             <span class="status-badge"><span class="status-dot"></span> Disponible para proyectos & colaboraciones</span>
             <h2>Contacto Directo</h2>
@@ -187,7 +221,7 @@
             </a>
 
             <!-- Instagram -->
-            <a href="https://instagram.com/tu-usuario" target="_blank" class="contact-card">
+            <a href="https://instagram.com/tu-usuario" target="_blank" class="contact-card" rel="noopener noreferrer">
                 <div class="contact-icon">📸</div>
                 <div class="contact-details">
                     <span>Instagram</span>
@@ -196,7 +230,7 @@
             </a>
 
             <!-- WhatsApp -->
-            <a href="https://wa.me/5215500000000" target="_blank" class="contact-card">
+            <a href="https://wa.me/5215500000000" target="_blank" class="contact-card" rel="noopener noreferrer">
                 <div class="contact-icon">💬</div>
                 <div class="contact-details">
                     <span>WhatsApp</span>
