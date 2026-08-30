@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Isai cor | Portafolio Personal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="logo">ISAI COR</div>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#universidad">Universidad</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- 1. INDEX / PRESENTACIÓN -->
+    <section id="index" class="hero-section">
+        <div class="hero-content">
+            <h1>Ingeniería & Desarrollo Digital</h1>
+            <p>Creando experiencias interactivas, software y diseño futurista.</p>
+            <a href="#proyectos" class="btn-primary">Ver Trabajos</a>
+        </div>
+        <div class="hero-canvas-container">
+            <!-- Espacio listo para la esfera/malla fluida en 3D -->
+            <div class="fluid-orb"></div>
+        </div>
+    </section>
+
+    <!-- 2. DESARROLLO UNIVERSITARIO -->
+    <section id="universidad" class="section-container">
+        <h2>Trayectoria Académica</h2>
+        
+        <div class="timeline-wrapper">
+            <!-- Línea vertical de fondo -->
+            <div class="timeline-line"></div>
+
+            <!-- Nodo 1 -->
+            <div class="timeline-node active" onclick="selectNode(this)">
+                <div class="node-dot"></div>
+                <div class="node-content">
+                    <span class="year">2022 - Inicio</span>
+                    <h3>Fundamentos & Primeros Pasos</h3>
+                    <p>Ingreso a la Licenciatura / Ingeniería en Comunicación Multimedia (UNEVE). Primeras bases de programación, diseño y estructuración de proyectos.</p>
+                </div>
+            </div>
+
+            <!-- Nodo 2 -->
+            <div class="timeline-node" onclick="selectNode(this)">
+                <div class="node-dot"></div>
+                <div class="node-content">
+                    <span class="year">2023 - Consolidación</span>
+                    <h3>Desarrollo Web & Bases de Datos</h3>
+                    <p>Programación orientada a objetos, aplicaciones con PHP, MySQL, JavaScript e interfaces gráficas con bases de datos relacionales.</p>
+                </div>
+            </div>
+
+            <!-- Nodo 3 -->
+            <div class="timeline-node" onclick="selectNode(this)">
+                <div class="node-dot"></div>
+                <div class="node-content">
+                    <span class="year">2025 - Especialización</span>
+                    <h3>Entornos 3D & Multimedia</h3>
+                    <p>Diseño tridimensional en Blender, programación gráfica con Three.js, animación digital y aplicaciones móviles interactivas.</p>
+                </div>
+            </div>
+
+            <!-- Nodo 4 -->
+            <div class="timeline-node" onclick="selectNode(this)">
+                <div class="node-dot"></div>
+                <div class="node-content">
+                    <span class="year">2026 - Presente</span>
+                    <h3>Proyectos Integradores & Innovación</h3>
+                    <p>Creación de portafolios digitales avanzados, arquitecturas de software completas e integración multimedia de alto impacto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. PROYECTOS DESTACADOS -->
+    <section id="proyectos" class="section-container">
+
+        <h2>Mis Proyectos</h2>
+        
+        <!-- Filtros interactivos -->
+        <div class="project-filters">
+            <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
+            <button class="filter-btn" onclick="filterProjects('web')">Web & Software</button>
+            <button class="filter-btn" onclick="filterProjects('3d')">Modelado 3D</button>
+            <button class="filter-btn" onclick="filterProjects('foto')">Fotografía</button>
+            <button class="filter-btn" onclick="filterProjects('arte')">Bocetos & Arte</button>
+        </div>
+
+        <div class="projects-grid">
+            
+            <!-- 1. Proyecto Web: Sitio de Departamentos -->
+            <div class="project-card" data-category="web">
+                <div class="card-gradient"></div>
+                <div class="card-tag">Web & Real Estate</div>
+                <h3>Gestión de Departamentos</h3>
+                <p>Plataforma web para la gestión y presentación interactiva de propiedades y alquileres familiares.</p>
+                <div class="tech-stack">
+                    <span>PHP / HTML / CSS</span>
+                    <span>Database</span>
+                </div>
+                <a href="#" class="card-link">Ver detalles &rarr;</a>
+            </div>
+
+            <!-- 2. Modelado 3D -->
+            <div class="project-card" data-category="3d">
+                <div class="card-gradient"></div>
+                <div class="card-tag">3D Design & Render</div>
+                <h3>Colección de Modelos 3D</h3>
+                <p>Escenas, activos tridimensionales, iluminación y entornos detallados renderizados en Blender / WebGL.</p>
+                <div class="tech-stack">
+                    <span>Blender</span>
+                    <span>Three.js</span>
+                </div>
+                <a href="#" class="card-link">Explorar Galería 3D &rarr;</a>
+            </div>
+
+            <!-- 3. Fotografía -->
+            <div class="project-card" data-category="foto">
+                <div class="card-gradient"></div>
+                <div class="card-tag">Visual & Media</div>
+                <h3>Galería Fotográfica</h3>
+                <p>Capturas enfocadas en composición, contraste visual, edición digital y tratamiento de color.</p>
+                <div class="tech-stack">
+                    <span>Composición</span>
+                    <span>Edición Digital</span>
+                </div>
+                <a href="#" class="card-link">Ver Fotografías &rarr;</a>
+            </div>
+
+            <!-- 4. Bocetos y Dibujos -->
+            <div class="project-card" data-category="arte">
+                <div class="card-gradient"></div>
+                <div class="card-tag">Illustration & Concept</div>
+                <h3>Bocetos & Ilustración</h3>
+                <p>Muestras de dibujo a mano, arte conceptual, diagramación visual y mapas de patrones creativos.</p>
+                <div class="tech-stack">
+                    <span>Ilustración</span>
+                    <span>Concept Art</span>
+                </div>
+                <a href="#" class="card-link">Ver Dibujos &rarr;</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- 4. CONTACTO -->
+    <section id="contacto" class="section-container">
+        <div class="contact-header">
+            <span class="status-badge"><span class="status-dot"></span> Disponible para proyectos & colaboraciones</span>
+            <h2>Contacto Directo</h2>
+            <p>Hablemos de negocios, colaboraciones o cualquier proyecto en mente.</p>
+        </div>
+
+        <div class="contact-centered-wrapper">
+            <!-- Correo -->
+            <a href="mailto:tu-correo@email.com" class="contact-card">
+                <div class="contact-icon">✉️</div>
+                <div class="contact-details">
+                    <span>Correo Electrónico</span>
+                    <p>tu-correo@email.com</p>
+                </div>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://instagram.com/tu-usuario" target="_blank" class="contact-card">
+                <div class="contact-icon">📸</div>
+                <div class="contact-details">
+                    <span>Instagram</span>
+                    <p>@tu-usuario</p>
+                </div>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/5215500000000" target="_blank" class="contact-card">
+                <div class="contact-icon">💬</div>
+                <div class="contact-details">
+                    <span>WhatsApp</span>
+                    <p>Enviar Mensaje Directo</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
