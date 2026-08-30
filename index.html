@@ -115,60 +115,43 @@
         </div>
 
         <div class="projects-grid">
-            
-            <!-- 1. Proyecto Web: Gestión de Departamentos -->
-            <article class="project-card" data-category="web">
-    <div class="card-gradient"></div>
-    <div class="card-tag">Web & Real Estate</div>
-    <h3>Gestión de Departamentos</h3>
-    <p>Plataforma web para la gestión y presentación interactiva de propiedades y alquileres familiares.</p>
-    <div class="tech-stack">
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>HTML/CSS</span>
-    </div>
-    <!-- Botón con la función correspondiente -->
-    <button type="button" class="btn-modal-trigger" onclick="abrirModalProyecto('deptos')">Ver detalles &rarr;</button>
-</article>
-
-            <!-- Otros proyectos... -->
-
-        </div>
-    </section>
-
-    <!-- MODAL TIPO ANUNCIO / VENTANA FLOTANTE -->
-    <div id="project-modal" class="modal-overlay" onclick="cerrarModalAfuera(event)">
-        <div class="modal-card" id="modal-card-content">
-            <button type="button" class="modal-close" onclick="cerrarModalDirecto()">&times;</button>
-            
-            <div class="modal-image-wrapper">
-                <img id="img/favicon." src="" alt="Vista previa del proyecto">
-            </div>
-
-            <div class="modal-body">
-                <h3 id="modal-title">Título del Proyecto</h3>
-                <p id="modal-desc">Descripción del proyecto...</p>
-                
-                <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
-                    Visitar Sitio Directo &rarr;
-                </a>
-            </div>
-        </div>
-    </div>
-
-    <article class="project-card" data-category="web">
+        <!-- En la sección de Proyectos (#projects) -->
+<article class="project-card" data-category="web">
     <div class="card-gradient"></div>
     <div class="card-tag">Web & Real Estate</div>
     <h3>Departamentos Cortázar</h3>
-    <p>Plataforma web para la gestión, arquitectura visual y presentación interactiva de propiedades familiares.</p>
+    <p>Plataforma web para la gestión y presentación interactiva de propiedades familiares.</p>
     <div class="tech-stack">
         <span>PHP</span>
         <span>MySQL</span>
         <span>HTML/CSS</span>
     </div>
-    <!-- Botón que activa la ventanita flotante -->
-    <button type="button" class="btn-modal-trigger" onclick="abrirModalProyecto('deptos')">Ver detalles &rarr;</button>
+    <!-- Botón que abre el anuncio -->
+    <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('deptos')">Ver detalles &rarr;</button>
 </article>
+
+<!-- Al final del HTML (justo antes de </body>) -->
+<div id="anuncio-modal" class="modal-overlay" onclick="cerrarAnuncioAfuera(event)">
+    <div class="modal-card" id="modal-card-content">
+        <button type="button" class="modal-close" onclick="cerrarAnuncioDirecto()">&times;</button>
+        
+        <!-- 1. Imagen de referencia -->
+        <div class="modal-image-wrapper">
+            <img id="modal-img" src="" alt="Departamentos Cortázar">
+        </div>
+
+        <div class="modal-body">
+            <h3 id="modal-title">Título</h3>
+            <!-- 2. Breve descripción -->
+            <p id="modal-desc">Descripción...</p>
+            
+            <!-- 3. Link directo al sitio web -->
+            <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
+                Visitar Sitio Web &rarr;
+            </a>
+        </div>
+    </div>
+</div>
 
             <!-- 2. Modelado 3D -->
             <article class="project-card" data-category="3d">

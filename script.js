@@ -19,68 +19,44 @@ if (mobileMenu && navMenu) {
     });
 }
 
-/* ==========================================
-   2. NUBE / MODAL TIPO ANUNCIO (PROYECTOS)
-   ========================================== */
-
-// Base de datos de proyectos
-const datosProyectos = {
-    deptos: {
-        title: "Gestión de Departamentos",
-        // 1. Imagen de referencia (reemplázala por tu captura real)
-        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop", 
-        // 2. Breve descripción
-        description: "Plataforma web para la gestión y presentación interactiva de propiedades y alquileres familiares.",
-        // 3. Link directo al sitio
-        link: "https://tu-sitio-de-departamentos.com", 
-        // 4. Color característico (clase configurada en tu CSS)
-        themeClass: "theme-deptos"
-    }
-};
-
-// Función principal para abrir la ventanita
-function abrirModalProyecto(idProyecto) {
-    const proyecto = datosProyectos[idProyecto];
-    if (!proyecto) return;
-
-    // Cargar datos dentro de la nube
-    const imgElem = document.getElementById('modal-img');
-    const titleElem = document.getElementById('modal-title');
-    const descElem = document.getElementById('modal-desc');
-    const linkElem = document.getElementById('modal-link');
-    const cardElem = document.getElementById('modal-card-content');
-    const overlayElem = document.getElementById('project-modal');
-
-    if (imgElem) imgElem.src = proyecto.image;
-    if (titleElem) titleElem.textContent = proyecto.title;
-    if (descElem) descElem.textContent = proyecto.description;
-    if (linkElem) linkElem.href = proyecto.link;
-
-    // Aplicar color característico e iluminar
-    if (cardElem) cardElem.className = 'modal-card ' + proyecto.themeClass;
-    if (overlayElem) overlayElem.classList.add('active');
-}
-
-// Funciones para cerrar
-function cerrarModalDirecto() {
-    const overlayElem = document.getElementById('project-modal');
-    if (overlayElem) overlayElem.classList.remove('active');
-}
-
-function cerrarModalAfuera(event) {
-    if (event.target.id === 'project-modal') {
-        cerrarModalDirecto();
-    }
-}
-
-// Base de datos de proyectos
-const datosProyectos = {
+// Datos que aparecerán dentro de la nube / anuncio
+const proyectosWeb = {
     deptos: {
         title: "Departamentos Cortázar",
-        // Reemplaza por la captura real de la plataforma o render del edificio
-        image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=600&auto=format&fit=crop", 
-        description: "Plataforma web interactiva desarrollada para la presentación, gestión visual y promoción del complejo de inmuebles familiares.",
-        link: "https://github.com/tu-usuario/departamentos-cortazar", // O la URL desplegada final
+        // 1. Imagen de referencia (pon aquí la ruta o URL de la captura real)
+        image: "img/favicon.png",
+        // 2. Breve descripción
+        description: "Plataforma web diseñada para la administración, gestión y presentación interactiva del complejo de departamentos familiares.",
+        // 3. Link directo al proyecto
+        link: "https://car273.github.io/departamentos-cortazar/", 
+        // 4. Color característico (definido en CSS)
         themeClass: "theme-deptos"
     }
 };
+
+// Abrir la nube/anuncio
+function abrirAnuncioProyecto(id) {
+    const info = proyectosWeb[id];
+    if (!info) return;
+
+    document.getElementById('modal-img').src = info.image;
+    document.getElementById('modal-title').textContent = info.title;
+    document.getElementById('modal-desc').textContent = info.description;
+    document.getElementById('modal-link').href = info.link;
+
+    const tarjeta = document.getElementById('modal-card-content');
+    tarjeta.className = 'modal-card ' + info.themeClass;
+
+    document.getElementById('anuncio-modal').classList.add('active');
+}
+
+// Cerrar la nube/anuncio
+function cerrarAnuncioDirecto() {
+    document.getElementById('anuncio-modal').classList.remove('active');
+}
+
+function cerrarAnuncioAfuera(event) {
+    if (event.target.id === 'anuncio-modal') {
+        cerrarAnuncioDirecto();
+    }
+}
