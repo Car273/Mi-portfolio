@@ -40,7 +40,6 @@
         </div>
     </header>
 
-    <!-- 1. HERO / PRESENTACIÓN -->
    <!-- 1. HERO / PRESENTACIÓN -->
 <section id="hero" class="hero-section">
     <div class="hero-container">
@@ -127,98 +126,83 @@
     <section id="projects" class="section-container">
         <h2>Mis Proyectos</h2>
         
-        <!-- Filtros de categoría -->
-        <div class="project-filters">
-            <button class="filter-btn active" onclick="filterProjects('all')">Todos</button>
-            <button class="filter-btn" onclick="filterProjects('web')">Web & Software</button>
-            <button class="filter-btn" onclick="filterProjects('3d')">Modelado 3D</button>
-            <button class="filter-btn" onclick="filterProjects('foto')">Fotografía</button>
-            <button class="filter-btn" onclick="filterProjects('arte')">Bocetos & Arte</button>
-        </div>
-
-        <div class="projects-grid">
-        <!-- En la sección de Proyectos (#projects) -->
-<article class="project-card" data-category="web">
-    <div class="card-gradient"></div>
-    <div class="card-tag">Web & Real Estate</div>
-    <h3>Departamentos Cortázar</h3>
-    <p>Plataforma web para la gestión y presentación interactiva de propiedades familiares.</p>
-    <div class="tech-stack">
-        <span>PHP</span>
-        <span>MySQL</span>
-        <span>HTML/CSS</span>
-    </div>
-    <!-- Botón que abre el anuncio -->
-    <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('deptos')">Ver detalles &rarr;</button>
-</article>
-
-<!-- Al final del HTML (justo antes de </body>) -->
-<div id="anuncio-modal" class="modal-overlay" onclick="cerrarAnuncioAfuera(event)">
-    <div class="modal-card" id="modal-card-content">
-        <button type="button" class="modal-close" onclick="cerrarAnuncioDirecto()">&times;</button>
-        
-        <!-- 1. Imagen de referencia -->
-        <div class="modal-image-wrapper">
-            <img id="modal-img" src="" alt="Departamentos Cortázar">
-        </div>
-
-        <div class="modal-body">
-            <h3 id="modal-title">Título</h3>
-            <!-- 2. Breve descripción -->
-            <p id="modal-desc">Descripción...</p>
-            
-            <!-- 3. Link directo al sitio web -->
-            <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
-                Visitar Sitio Web &rarr;
-            </a>
-        </div>
-    </div>
+<!-- Filtros de Proyectos -->
+<div class="project-filters">
+    <button type="button" class="filter-btn active" onclick="filterProjects('all')">Todos</button>
+    <button type="button" class="filter-btn" onclick="filterProjects('web')">Web & Software</button>
+    <button type="button" class="filter-btn" onclick="filterProjects('3d')">Modelado 3D</button>
+    <button type="button" class="filter-btn" onclick="filterProjects('foto')">Fotografía</button>
+    <button type="button" class="filter-btn" onclick="filterProjects('arte')">Bocetos & Arte</button>
 </div>
 
-            <!-- 2. Modelado 3D -->
-             <!-- TARJETA DE MODELADO 3D -->
-<article class="project-card" data-category="3d">
-    <div class="card-gradient"></div>
-    <div class="card-tag">3D & Graphic Design</div>
-    <h3>Visualización 3D & Entornos</h3>
-    <p>Modelado de objetos, iluminación de escenas y renderizado de entornos virtuales interactivos.</p>
-    <div class="tech-stack">
-        <span>Blender</span>
-        <span>Three.js</span>
-        <span>WebGL</span>
-    </div>
-    <!-- Botón que abre el anuncio del proyecto 3D -->
-    <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('modelado3d')">Ver detalles &rarr;</button>
-</article>
+<!-- Grilla de Tarjetas -->
+<div class="projects-grid">
 
-            <!-- 3. Fotografía -->
-            <article class="project-card" data-category="foto">
-                <div class="card-gradient"></div>
-                <div class="card-tag">Visual & Media</div>
-                <h3>Galería Fotográfica</h3>
-                <p>Capturas enfocadas en composición, contraste visual, edición digital y tratamiento de color.</p>
-                <div class="tech-stack">
-                    <span>Composición</span>
-                    <span>Edición Digital</span>
-                </div>
-                <a href="#" class="card-link">Ver Fotografías &rarr;</a>
-            </article>
-
-            <!-- 4. Bocetos y Dibujos -->
-            <article class="project-card" data-category="arte">
-                <div class="card-gradient"></div>
-                <div class="card-tag">Illustration & Concept</div>
-                <h3>Bocetos & Ilustración</h3>
-                <p>Muestras de dibujo a mano, arte conceptual, diagramación visual y mapas de patrones creativos.</p>
-                <div class="tech-stack">
-                    <span>Ilustración</span>
-                    <span>Concept Art</span>
-                </div>
-                <a href="#" class="card-link">Ver Dibujos &rarr;</a>
-            </article>
-
+    <!-- Tarjeta: Web & Software -->
+    <article class="project-card" data-category="web">
+        <div class="card-gradient"></div>
+        <div class="card-tag">Web & Software</div>
+        <h3>Departamentos Cortázar</h3>
+        <p>Plataforma web interactiva desarrollada para la presentación, administración y gestión visual de la propiedad familiar.</p>
+        <div class="tech-stack">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JS</span>
         </div>
-    </section>
+        <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('deptos')">Ver Detalles &rarr;</button>
+    </article>
+
+    <!-- Tarjeta: Modelado 3D -->
+    <article class="project-card" data-category="3d">
+        <div class="card-gradient"></div>
+        <div class="card-tag">3D & CGI</div>
+        <h3>Galería 3D</h3>
+        <p>Renderizado, composición e iluminación tridimensional para entornos virtuales e interactivos.</p>
+        <div class="tech-stack">
+            <span>Blender</span>
+            <span>Three.js</span>
+        </div>
+        <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('modelado3d')">Ver Modelos 3D &rarr;</button>
+    </article>
+
+    <!-- Tarjeta: Fotografía -->
+    <article class="project-card" data-category="foto">
+        <div class="card-gradient"></div>
+        <div class="card-tag">Visual & Media</div>
+        <h3>Galería Fotográfica</h3>
+        <p>Capturas enfocadas en composición, contraste visual, edición digital y tratamiento de color.</p>
+        <div class="tech-stack">
+            <span>Composición</span>
+            <span>Edición Digital</span>
+        </div>
+        <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('galeriaFotos')">Ver Fotografías &rarr;</button>
+    </article>
+
+</div>
+
+<!-- Modal Ventana Flotante -->
+<div id="anuncio-modal" class="modal-overlay" onclick="cerrarAnuncioAfuera(event)">
+    <div id="modal-card-content" class="modal-card">
+        
+        <!-- Botón de Cierre -->
+        <button type="button" class="modal-close" onclick="cerrarAnuncioDirecto()">&times;</button>
+        
+        <!-- Contenido Dinámico -->
+        <div class="modal-body">
+            <img id="modal-img" src="" alt="Vista previa del proyecto">
+            <h3 id="modal-title"></h3>
+            <p id="modal-desc"></p>
+            <a id="modal-link" href="#" target="_blank" class="modal-btn-link">Visitar Sitio Web &rarr;</a>
+        </div>
+
+        <!-- Controles de Navegación del Carrusel -->
+        <div id="modal-carousel-controls" class="carousel-controls" style="display: none;">
+            <button type="button" class="nav-arrow prev" onclick="cambiarModelo(-1)">&#10094;</button>
+            <button type="button" class="nav-arrow next" onclick="cambiarModelo(1)">&#10095;</button>
+        </div>
+
+    </div>
+</div>
 
     <!-- 4. SECCIÓN CONTACTO (id="contact") -->
     <section id="contact" class="section-container">
