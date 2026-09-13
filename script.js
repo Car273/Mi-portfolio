@@ -63,7 +63,7 @@ const proyectosWeb = {
         modelos: [
             {
                 title: "Escena & Entorno Virtual",
-                image: "img/render_oxxo.png",
+                image: "img/render_modelo1.png",
                 description: "Modelado tridimensional y composición de iluminación para entorno comercial virtual.",
                 link: "#"
             },
@@ -109,16 +109,13 @@ const proyectosWeb = {
                 image: "img/foto4.jpeg",
                 description: "Enfoque macro y edición digital de detalle.",
                 link: "#"
-
             },
             {
                 title: "Detalle & Textura",
                 image: "img/foto5.jpeg",
                 description: "Enfoque macro y edición digital de detalle.",
                 link: "#"
-
-            },
-
+            }
         ]
     }
 };
@@ -135,6 +132,7 @@ function abrirAnuncioProyecto(id) {
 
     const tarjeta = document.getElementById('modal-card-content');
     const controlesCarrusel = document.getElementById('modal-carousel-controls');
+    const modalLink = document.getElementById('modal-link');
     
     tarjeta.className = 'modal-card ' + info.themeClass;
 
@@ -148,17 +146,33 @@ function abrirAnuncioProyecto(id) {
         document.getElementById('modal-img').src = info.image;
         document.getElementById('modal-title').textContent = info.title;
         document.getElementById('modal-desc').textContent = info.description;
-        document.getElementById('modal-link').href = info.link;
+        
+        // Control de visibilidad del botón para modal simple
+        if (!info.link || info.link === "#" || info.link.trim() === "") {
+            modalLink.style.display = 'none';
+        } else {
+            modalLink.style.display = 'inline-block';
+            modalLink.href = info.link;
+        }
     }
 
     document.getElementById('anuncio-modal').classList.add('active');
 }
 
 function cargarModeloEnModal(item) {
+    const modalLink = document.getElementById('modal-link');
+
     document.getElementById('modal-img').src = item.image;
     document.getElementById('modal-title').textContent = item.title;
     document.getElementById('modal-desc').textContent = item.description;
-    document.getElementById('modal-link').href = item.link;
+
+    // Control de visibilidad del botón en carrusel
+    if (!item.link || item.link === "#" || item.link.trim() === "") {
+        modalLink.style.display = 'none';
+    } else {
+        modalLink.style.display = 'inline-block';
+        modalLink.href = item.link;
+    }
 }
 
 function cambiarModelo(direccion) {
