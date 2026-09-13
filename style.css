@@ -1,6 +1,7 @@
 /* ==========================================
-   0. RESET Y ESTILOS BASE (MODO CLARO)
-   ========================================== */
+   0. RESET Y ESTILOS BASE
+========================================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -20,6 +21,7 @@ a {
 }
 
 /* NAVBAR */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -84,6 +86,7 @@ a {
 }
 
 /* HERO SECTION */
+
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -167,7 +170,11 @@ a {
 .fluid-orb {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, #5b42f3 0%, rgba(139, 92, 246, 0.2) 70%);
+    background: radial-gradient(
+        circle,
+        #5b42f3 0%,
+        rgba(139, 92, 246, 0.2) 70%
+    );
     border-radius: 50%;
     filter: blur(40px);
     margin: 0 auto;
@@ -181,7 +188,8 @@ a {
 
 /* ==========================================
    1. FILTROS Y TARJETAS DE PROYECTOS
-   ========================================== */
+========================================== */
+
 .project-filters {
     display: flex;
     gap: 10px;
@@ -200,7 +208,7 @@ a {
     transition: all 0.3s ease;
 }
 
-.filter-btn.active, 
+.filter-btn.active,
 .filter-btn:hover {
     background: #5b42f3;
     color: #ffffff;
@@ -274,8 +282,9 @@ a {
 }
 
 /* ==========================================
-   2. VENTANA MODAL (FLOTANTE)
-   ========================================== */
+   2. VENTANA MODAL
+========================================== */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -293,7 +302,6 @@ a {
     transition: opacity 0.3s ease;
     z-index: 2000;
     padding: 20px;
-    box-sizing: border-box;
 }
 
 .modal-overlay.active {
@@ -320,7 +328,7 @@ a {
 }
 
 .modal-card.theme-deptos {
-    border-top: 4px solid #2563eb; 
+    border-top: 4px solid #2563eb;
 }
 
 .modal-card.theme-3d {
@@ -328,8 +336,9 @@ a {
 }
 
 /* ==========================================
-   3. BOTÓN DE CIERRE (X)
-   ========================================== */
+   3. BOTÓN DE CIERRE
+========================================== */
+
 .modal-close {
     position: absolute;
     top: 15px;
@@ -358,8 +367,9 @@ a {
 }
 
 /* ==========================================
-   4. CONTENIDO DEL MODAL Y IMÁGENES
-   ========================================== */
+   4. CONTENIDO DEL MODAL
+========================================== */
+
 .modal-body {
     padding: 25px;
     display: flex;
@@ -392,7 +402,7 @@ a {
     pointer-events: none;
 }
 
-.modal-btn-link, 
+.modal-btn-link,
 .modal-btn {
     display: inline-block;
     width: 100%;
@@ -403,11 +413,10 @@ a {
     border-radius: 10px;
     font-weight: 600;
     text-align: center;
-    box-sizing: border-box;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.modal-btn-link:hover, 
+.modal-btn-link:hover,
 .modal-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
@@ -415,7 +424,8 @@ a {
 
 /* ==========================================
    5. CONTROLES DEL CARRUSEL
-   ========================================== */
+========================================== */
+
 .carousel-controls {
     position: absolute;
     top: 35%;
@@ -423,11 +433,10 @@ a {
     display: flex;
     justify-content: space-between;
     padding: 0 10px;
-    box-sizing: border-box;
     pointer-events: none;
 }
 
-.nav-arrow, 
+.nav-arrow,
 .btn-carousel {
     background: rgba(255, 255, 255, 0.9);
     color: #111827;
@@ -444,7 +453,7 @@ a {
     transition: background 0.2s, transform 0.2s;
 }
 
-.nav-arrow:hover, 
+.nav-arrow:hover,
 .btn-carousel:hover {
     background: #8b5cf6;
     color: #ffffff;
@@ -453,15 +462,18 @@ a {
 
 /* ==========================================
    6. RESPONSIVE (MÓVIL)
-   ========================================== */
+========================================== */
+
 @media (max-width: 768px) {
+
+    /* NAVBAR */
+
     .nav-container {
         padding: 15px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        box-sizing: border-box;
     }
 
     .btn-contact-desktop {
@@ -489,18 +501,24 @@ a {
         transition: all 0.3s ease;
     }
 
+    /* MENÚ MÓVIL */
+
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 0;
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         background: rgba(247, 247, 244, 0.95);
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
-        width: 100%;
-        height: 100vh;
-        justify-content: center;
-        align-items: center;
+
         transition: left 0.3s ease;
         z-index: 1000;
     }
@@ -510,10 +528,13 @@ a {
     }
 
     .nav-links {
+        display: flex;
         flex-direction: column;
         gap: 30px;
         text-align: center;
     }
+
+    /* ANIMACIÓN DEL BOTÓN */
 
     .menu-toggle.active .bar:nth-child(2) {
         opacity: 0;
@@ -526,17 +547,45 @@ a {
     .menu-toggle.active .bar:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
-    
+
+    /* HERO */
+
     .hero-container {
-        flex-direction: column-reverse;
+        grid-template-columns: 1fr;
         gap: 20px;
         text-align: center;
         padding-top: 60px;
     }
 
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-content p {
+        max-width: 90%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
     .hero-canvas-container {
         width: 100%;
         height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .fluid-orb {
@@ -545,11 +594,52 @@ a {
         filter: blur(20px);
         opacity: 0.95;
     }
+
+    /* SOBRE MÍ */
+
+    .about-section {
+        padding: 70px 25px;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-intro h2 {
+        font-size: 2.2rem;
+    }
+
+    .about-skills {
+        grid-template-columns: 1fr;
+    }
+
+    /* PROYECTOS */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 22px;
+    }
+
+    /* TRAYECTORIA */
+
+    .timeline-section {
+        padding: 70px 25px;
+    }
+
+    .timeline-title {
+        font-size: 2rem;
+    }
 }
 
-/* =========================
-   SOBRE MÍ
-========================= */
+
+/* ==========================================
+   7. SOBRE MÍ
+========================================== */
+
 .about-section {
     padding: 100px 25px;
     background: #efefe9;
@@ -558,6 +648,7 @@ a {
 .about-container {
     max-width: 1200px;
     margin: 0 auto;
+
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     gap: 70px;
@@ -587,7 +678,9 @@ a {
     margin-bottom: 15px;
 }
 
+
 /* TARJETAS SOBRE MÍ */
+
 .about-skills {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -626,29 +719,11 @@ a {
     color: #4b5563;
 }
 
-/* RESPONSIVE SOBRE MÍ */
-@media screen and (max-width: 768px) {
-    .about-section {
-        padding: 70px 25px;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .about-intro h2 {
-        font-size: 2.2rem;
-    }
-
-    .about-skills {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ==========================================
-   7. TRAYECTORIA ACADÉMICA
-   ========================================== */
+   8. TRAYECTORIA ACADÉMICA
+========================================== */
+
 .timeline-section {
     padding: 80px 25px;
     background: #f7f7f4;
