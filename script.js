@@ -21,14 +21,14 @@ if (mobileMenu && navMenu) {
 /* ==========================================
    2. FILTRADO DE PROYECTOS
    ========================================== */
-function filterProjects(category) {
+function filterProjects(category, event) {
     // 1. Cambiar estado visual de los botones
     const buttons = document.querySelectorAll('.filter-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
     
-    // Marcar como activo el botón presionado
-    if (event && event.target) {
-        event.target.classList.add('active');
+    // Marcar como activo el botón presionado si proviene de un evento
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
     }
 
     // 2. Mostrar u ocultar tarjetas según la categoría
@@ -37,7 +37,7 @@ function filterProjects(category) {
         const cardCategory = card.getAttribute('data-category');
         
         if (category === 'all' || cardCategory === category) {
-            card.style.display = 'block';
+            card.style.display = 'flex';
         } else {
             card.style.display = 'none';
         }
@@ -84,26 +84,41 @@ const proyectosWeb = {
     galeriaFotos: {
         tipo: "carrusel",
         title: "Galería Fotográfica",
-        themeClass: "theme-3d",
+        themeClass: "theme-5d",
         modelos: [
             {
                 title: "Composición Urbana",
-                image: "img/foto1.jpg", // Cambia por la ruta de tu imagen
+                image: "img/foto1.jpeg",
                 description: "Exploración de encuadres, geometría urbana y perspectiva.",
                 link: "#"
             },
             {
                 title: "Contraste & Luz",
-                image: "img/foto2.jpg", // Cambia por la ruta de tu imagen
+                image: "img/foto2.jpeg",
                 description: "Captura enfocada en el tratamiento del color y sombras.",
                 link: "#"
             },
             {
                 title: "Detalle & Textura",
-                image: "img/foto3.jpg", // Cambia por la ruta de tu imagen
+                image: "img/foto3.jpeg",
                 description: "Enfoque macro y edición digital de detalle.",
                 link: "#"
-            }
+            },
+            {
+                title: "Detalle & Textura",
+                image: "img/foto4.jpeg",
+                description: "Enfoque macro y edición digital de detalle.",
+                link: "#"
+
+            },
+            {
+                title: "Detalle & Textura",
+                image: "img/foto5.jpeg",
+                description: "Enfoque macro y edición digital de detalle.",
+                link: "#"
+
+            },
+
         ]
     }
 };
@@ -112,7 +127,7 @@ const proyectosWeb = {
    4. LÓGICA DEL MODAL Y CARRUSEL
    ========================================== */
 let proyectoCarruselActual = 'modelado3d';
-let modeloIndexActual = 0; // Se declara la variable para evitar errores de referencia
+let modeloIndexActual = 0;
 
 function abrirAnuncioProyecto(id) {
     const info = proyectosWeb[id];

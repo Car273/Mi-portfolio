@@ -30,6 +30,7 @@
             <nav class="nav-menu">
                 <ul class="nav-links">
                     <li><a href="#hero" class="nav-link">Inicio</a></li>
+                    <li><a href="#about" class="nav-link">conoceme</a></li>
                     <li><a href="#timeline" class="nav-link">Trayectoria</a></li>
                     <li><a href="#projects" class="nav-link">Proyectos</a></li>
                     <li><a href="#contact" class="nav-link nav-cta-mobile">Contacto</a></li>
@@ -41,7 +42,7 @@
     </header>
 
    <!-- 1. HERO / PRESENTACIÓN -->
-<section id="hero" class="hero-section">
+   <section id="hero" class="hero-section">
     <div class="hero-container">
 
         <div class="hero-content">
@@ -63,7 +64,7 @@
                 </a>
 
                 <a href="#about" class="btn-secondary">
-                    Sobre mí
+                    conoceme
                 </a>
             </div>
 
@@ -76,49 +77,103 @@
     </div>
 </section>
 
+<!-- 2. Conoceme -->
+<section id="about" class="about-section">
+
+    <div class="about-container">
+
+        <div class="about-intro">
+
+            <span class="section-label">SOBRE ISAI COR</span>
+
+            <h2>Ideas, tecnología y creatividad en un mismo proyecto.</h2>
+
+            <p>
+                Soy estudiante de Ingeniería en Comunicación Multimedia y
+                me interesa crear proyectos digitales que combinen tecnología,
+                creatividad y diferentes experiencias multimedia.
+            </p>
+
+            <p>
+                Actualmente desarrollo proyectos relacionados con páginas web,
+                modelado 3D, fotografía y recursos interactivos, mientras
+                continúo aprendiendo y desarrollando nuevas habilidades.
+            </p>
+
+        </div>
+
+
+        <div class="about-skills">
+
+            <div class="skill-card">
+                <div class="skill-icon">🌐</div>
+                <h3>Desarrollo Web</h3>
+                <p>
+                    Creación de sitios web y proyectos digitales interactivos.
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">🧊</div>
+                <h3>Modelado 3D</h3>
+                <p>
+                    Creación y visualización de modelos y entornos en 3D.
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">📸</div>
+                <h3>Fotografía</h3>
+                <p>
+                    Captura y composición visual para diferentes proyectos.
+                </p>
+            </div>
+
+
+            <div class="skill-card">
+                <div class="skill-icon">✨</div>
+                <h3>Multimedia</h3>
+                <p>
+                    Integración de diferentes recursos digitales y visuales.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
     <!-- 2. TRAYECTORIA ACADÉMICA (id="timeline") -->
-    <section id="timeline" class="section-container">
-        <h2>Trayectoria Académica</h2>
-        
-        <div class="timeline-wrapper">
-            <div class="timeline-line"></div>
+    <section class="timeline-section">
+    <div class="timeline-container">
+        <h2 class="timeline-title">Trayectoria Académica</h2>
 
-            <!-- Nodos interactivos -->
-            <div class="timeline-node active" onclick="selectNode(this)">
-                <div class="node-dot"></div>
-                <div class="node-content">
-                    <span class="year">2022 - Inicio</span>
-                    <h3>Fundamentos & Primeros Pasos</h3>
-                    <p>Ingreso a la Licenciatura / Ingeniería en Comunicación Multimedia (UNEVE). Primeras bases de programación, diseño y estructuración de proyectos.</p>
-                </div>
-            </div>
+        <div class="timeline-item">
+            <span class="timeline-year">2022 - Inicio</span>
+            <h3>Fundamentos & Primeros Pasos</h3>
+            <p>Ingreso a la Licenciatura / Ingeniería en Comunicación Multimedia (UNEVE)...</p>
+        </div>
 
-            <div class="timeline-node" onclick="selectNode(this)">
-                <div class="node-dot"></div>
-                <div class="node-content">
-                    <span class="year">2023 - Consolidación</span>
-                    <h3>Desarrollo Web & Bases de Datos</h3>
-                    <p>Programación orientada a objetos, aplicaciones con PHP, MySQL, JavaScript e interfaces gráficas con bases de datos relacionales.</p>
-                </div>
-            </div>
+        <div class="timeline-item">
+            <span class="timeline-year">2023 - Consolidación</span>
+            <h3>Desarrollo Web & Bases de Datos</h3>
+            <p>Programación orientada a objetos, aplicaciones con PHP, MySQL...</p>
+        </div>
 
-            <div class="timeline-node" onclick="selectNode(this)">
-                <div class="node-dot"></div>
-                <div class="node-content">
-                    <span class="year">2025 - Especialización</span>
-                    <h3>Entornos 3D & Multimedia</h3>
-                    <p>Diseño tridimensional en Blender, programación gráfica con Three.js, animación digital y aplicaciones móviles interactivas.</p>
-                </div>
-            </div>
+        <div class="timeline-item">
+            <span class="timeline-year">2025 - Especialización</span>
+            <h3>Entornos 3D & Multimedia</h3>
+            <p>Diseño tridimensional en Blender, programación gráfica con Three.js...</p>
+        </div>
 
-            <div class="timeline-node" onclick="selectNode(this)">
-                <div class="node-dot"></div>
-                <div class="node-content">
-                    <span class="year">2026 - Presente</span>
-                    <h3>Proyectos Integradores & Innovación</h3>
-                    <p>Creación de portafolios digitales avanzados, arquitecturas de software completas e integración multimedia de alto impacto.</p>
-                </div>
-            </div>
+         <div class="timeline-item">
+              <span class="timeline-year">2026 - Presente</span>
+              <h3>Proyectos Integradores & Innovación</h3>
+              <p>Creación de portafolios digitales avanzados, arquitecturas de software completas e integración multimedia de alto impacto.</p>
+        </div>
         </div>
     </section>
 
@@ -126,83 +181,84 @@
     <section id="projects" class="section-container">
         <h2>Mis Proyectos</h2>
         
-<!-- Filtros de Proyectos -->
-<div class="project-filters">
-    <button type="button" class="filter-btn active" onclick="filterProjects('all')">Todos</button>
-    <button type="button" class="filter-btn" onclick="filterProjects('web')">Web & Software</button>
-    <button type="button" class="filter-btn" onclick="filterProjects('3d')">Modelado 3D</button>
-    <button type="button" class="filter-btn" onclick="filterProjects('foto')">Fotografía</button>
-    <button type="button" class="filter-btn" onclick="filterProjects('arte')">Bocetos & Arte</button>
-</div>
-
-<!-- Grilla de Tarjetas -->
-<div class="projects-grid">
-
-    <!-- Tarjeta: Web & Software -->
-    <article class="project-card" data-category="web">
-        <div class="card-gradient"></div>
-        <div class="card-tag">Web & Software</div>
-        <h3>Departamentos Cortázar</h3>
-        <p>Plataforma web interactiva desarrollada para la presentación, administración y gestión visual de la propiedad familiar.</p>
-        <div class="tech-stack">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JS</span>
-        </div>
-        <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('deptos')">Ver Detalles &rarr;</button>
-    </article>
-
-    <!-- Tarjeta: Modelado 3D -->
-    <article class="project-card" data-category="3d">
-        <div class="card-gradient"></div>
-        <div class="card-tag">3D & CGI</div>
-        <h3>Galería 3D</h3>
-        <p>Renderizado, composición e iluminación tridimensional para entornos virtuales e interactivos.</p>
-        <div class="tech-stack">
-            <span>Blender</span>
-            <span>Three.js</span>
-        </div>
-        <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('modelado3d')">Ver Modelos 3D &rarr;</button>
-    </article>
-
-    <!-- Tarjeta: Fotografía -->
-    <article class="project-card" data-category="foto">
-        <div class="card-gradient"></div>
-        <div class="card-tag">Visual & Media</div>
-        <h3>Galería Fotográfica</h3>
-        <p>Capturas enfocadas en composición, contraste visual, edición digital y tratamiento de color.</p>
-        <div class="tech-stack">
-            <span>Composición</span>
-            <span>Edición Digital</span>
-        </div>
-        <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('galeriaFotos')">Ver Fotografías &rarr;</button>
-    </article>
-
-</div>
-
-<!-- Modal Ventana Flotante -->
-<div id="anuncio-modal" class="modal-overlay" onclick="cerrarAnuncioAfuera(event)">
-    <div id="modal-card-content" class="modal-card">
-        
-        <!-- Botón de Cierre -->
-        <button type="button" class="modal-close" onclick="cerrarAnuncioDirecto()">&times;</button>
-        
-        <!-- Contenido Dinámico -->
-        <div class="modal-body">
-            <img id="modal-img" src="" alt="Vista previa del proyecto">
-            <h3 id="modal-title"></h3>
-            <p id="modal-desc"></p>
-            <a id="modal-link" href="#" target="_blank" class="modal-btn-link">Visitar Sitio Web &rarr;</a>
+        <!-- Filtros de Proyectos -->
+        <div class="project-filters">
+            <button type="button" class="filter-btn active" onclick="filterProjects('all')">Todos</button>
+            <button type="button" class="filter-btn" onclick="filterProjects('web')">Web & Software</button>
+            <button type="button" class="filter-btn" onclick="filterProjects('3d')">Modelado 3D</button>
+            <button type="button" class="filter-btn" onclick="filterProjects('foto')">Fotografía</button>
+            <button type="button" class="filter-btn" onclick="filterProjects('arte')">Bocetos & Arte</button>
         </div>
 
-        <!-- Controles de Navegación del Carrusel -->
-        <div id="modal-carousel-controls" class="carousel-controls" style="display: none;">
-            <button type="button" class="nav-arrow prev" onclick="cambiarModelo(-1)">&#10094;</button>
-            <button type="button" class="nav-arrow next" onclick="cambiarModelo(1)">&#10095;</button>
-        </div>
+        <!-- Grilla de Tarjetas -->
+        <div class="projects-grid">
 
+            <!-- Tarjeta: Web & Software -->
+            <article class="project-card" data-category="web">
+                <div class="card-gradient"></div>
+                <div class="card-tag">Web & Software</div>
+                <h3>Departamentos Cortázar</h3>
+                <p>Plataforma web interactiva desarrollada para la presentación, administración y gestión visual de la propiedad familiar.</p>
+                <div class="tech-stack">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JS</span>
+                </div>
+                <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('deptos')">Ver Detalles &rarr;</button>
+            </article>
+
+            <!-- Tarjeta: Modelado 3D -->
+            <article class="project-card" data-category="3d">
+                <div class="card-gradient"></div>
+                <div class="card-tag">3D & CGI</div>
+                <h3>Galería 3D</h3>
+                <p>Renderizado, composición e iluminación tridimensional para entornos virtuales e interactivos.</p>
+                <div class="tech-stack">
+                    <span>Blender</span>
+                    <span>Three.js</span>
+                </div>
+                <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('modelado3d')">Ver Modelos 3D &rarr;</button>
+            </article>
+
+            <!-- Tarjeta: Fotografía -->
+            <article class="project-card" data-category="foto">
+                <div class="card-gradient"></div>
+                <div class="card-tag">Visual & Media</div>
+                <h3>Galería Fotográfica</h3>
+                <p>Capturas enfocadas en composición, contraste visual, edición digital y tratamiento de color.</p>
+                <div class="tech-stack">
+                    <span>Composición</span>
+                    <span>Edición Digital</span>
+                </div>
+                <button type="button" class="btn-modal-trigger" onclick="abrirAnuncioProyecto('galeriaFotos')">Ver Fotografías &rarr;</button>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- MODAL ÚNICO / VENTANA FLOTANTE -->
+    <div id="anuncio-modal" class="modal-overlay" onclick="cerrarAnuncioAfuera(event)">
+        <div id="modal-card-content" class="modal-card">
+            
+            <!-- Botón de Cierre -->
+            <button type="button" class="modal-close" onclick="cerrarAnuncioDirecto()">&times;</button>
+            
+            <!-- Contenido Dinámico -->
+            <div class="modal-body">
+                <img id="modal-img" src="" alt="Vista previa del proyecto">
+                <h3 id="modal-title"></h3>
+                <p id="modal-desc"></p>
+                <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="modal-btn-link">Visitar Sitio Web &rarr;</a>
+            </div>
+
+            <!-- Controles de Navegación del Carrusel -->
+            <div id="modal-carousel-controls" class="carousel-controls" style="display: none;">
+                <button type="button" class="nav-arrow prev" onclick="cambiarModelo(-1)">&#10094;</button>
+                <button type="button" class="nav-arrow next" onclick="cambiarModelo(1)">&#10095;</button>
+            </div>
+
+        </div>
     </div>
-</div>
 
     <!-- 4. SECCIÓN CONTACTO (id="contact") -->
     <section id="contact" class="section-container">
@@ -240,33 +296,7 @@
                 </div>
             </a>
         </div>
-    </section>
-
-    <!-- MODAL / ANUNCIO CON NAVEGACIÓN -->
-<div id="anuncio-modal" class="modal-overlay" onclick="cerrarAnuncioAfuera(event)">
-    <div class="modal-card" id="modal-card-content">
-        <button type="button" class="modal-close" onclick="cerrarAnuncioDirecto()">&times;</button>
-        
-        <div class="modal-image-wrapper">
-            <img id="modal-img" src="" alt="Vista previa 3D">
-            
-            <!-- Botones de carrusel dentro de la imagen -->
-            <div id="modal-carousel-controls" class="carousel-controls">
-                <button type="button" class="btn-carousel" onclick="cambiarModelo(-1)">&10094;</button>
-                <button type="button" class="btn-carousel" onclick="cambiarModelo(1)">&10095;</button>
-            </div>
-        </div>
-
-        <div class="modal-body">
-            <h3 id="modal-title">Título</h3>
-            <p id="modal-desc">Descripción...</p>
-            
-            <a id="modal-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-primary modal-btn">
-                Ver Render / Demo &rarr;
-            </a>
-        </div>
-    </div>
-</div>
+        </section>
 
     <script src="script.js"></script>
 </body>
