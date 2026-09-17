@@ -606,7 +606,16 @@ a {
     }
 
     .about-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
         padding: 1.5rem 1rem;
+        box-sizing: border-box;
+    }
+
+    .about-intro{
+        width: 100%;
+        max-width: 100%;
     }
 
     .about-intro h2 {
@@ -614,10 +623,11 @@ a {
     }
 
     .about-skills {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1.5rem;
-        margin-top: 2rem;
+        gap: 1rem;
+        margin-top: 1.5rem;
     }
 
     /* PROYECTOS */
