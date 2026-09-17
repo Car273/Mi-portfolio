@@ -466,6 +466,11 @@ a {
 
 @media (max-width: 768px) {
 
+    /* 1. Prevenir desbordamiento horizontal */
+    body, html {
+        overflow-x: hidden;
+    }
+
     /* NAVBAR */
 
     .nav-container {
@@ -551,10 +556,10 @@ a {
     /* HERO */
 
     .hero-container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        padding-top: 60px;
     }
 
     .hero-content {
@@ -582,17 +587,16 @@ a {
 
     .hero-canvas-container {
         width: 100%;
-        height: 250px;
+        height: 200px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
     .fluid-orb {
-        width: 180px;
-        height: 180px;
-        filter: blur(20px);
-        opacity: 0.95;
+        width: 150px;
+        height: 150px;
+        opacity: 0.6;
     }
 
     /* SOBRE MÍ */
@@ -602,8 +606,7 @@ a {
     }
 
     .about-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
+        padding: 1.5rem 1rem;
     }
 
     .about-intro h2 {
@@ -611,7 +614,10 @@ a {
     }
 
     .about-skills {
+        display: grid;
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
     }
 
     /* PROYECTOS */
