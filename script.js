@@ -21,26 +21,20 @@ if (mobileMenu && navMenu) {
 /* ==========================================
    2. FILTRADO DE PROYECTOS
    ========================================== */
-function filterProjects(category, event) {
+function filterProjects(category, e) {
+    const evt = e || window.event;
+    const clicked = evt && evt.target ? evt.target.closest('.filter-btn') : null;
+ 
     // 1. Cambiar estado visual de los botones
-    const buttons = document.querySelectorAll('.filter-btn');
-    buttons.forEach(btn => btn.classList.remove('active'));
-    
-    // Marcar como activo el botón presionado si proviene de un evento
-    if (event && event.currentTarget) {
-        event.currentTarget.classList.add('active');
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    if (clicked) {
+        clicked.classList.add('active');
     }
-
+ 
     // 2. Mostrar u ocultar tarjetas según la categoría
-    const cards = document.querySelectorAll('.project-card');
-    cards.forEach(card => {
+    document.querySelectorAll('.project-card').forEach(card => {
         const cardCategory = card.getAttribute('data-category');
-        
-        if (category === 'all' || cardCategory === category) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
+        card.style.display = (category === 'all' || cardCategory === category) ? 'flex' : 'none';
     });
 }
 
@@ -48,14 +42,17 @@ function filterProjects(category, event) {
    3. BASE DE DATOS DE PROYECTOS
    ========================================== */
 const proyectosWeb = {
-    deptos: {
+     deptos: {
         tipo: "simple",
         title: "Departamentos Cortázar",
+        // Cuando tengas una foto real de un departamento, súbela a la
+        // carpeta img/ y cambia esta ruta (ej: "img/depto1.jpg").
         image: "img/favicon.png",
-        description: "Confort, seguridad y hogar. Plataforma web interactiva desarrollada para la presentación, administración y gestión visual de la propiedad familiar.",
-        link: "https://car273.github.io/departamentos-cortazar/", 
+        description: "Problema: los interesados en rentar cancelaban citas por lluvia o por traslado. Solución: un sitio donde ven fotos y recorrido virtual de los departamentos antes de visitarlos. Mi trabajo: diseño, fotografía en sitio, desarrollo con HTML, CSS y JS, y más de 30 actualizaciones durante unos 2 meses.",
+        link: "https://car273.github.io/departamentos-cortazar/",
         themeClass: "theme-deptos"
     },
+
     modelado3d: {
         tipo: "carrusel",
         title: "Galería de Modelados 3D",

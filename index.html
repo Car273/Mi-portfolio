@@ -231,7 +231,9 @@
                 <div class="card-gradient"></div>
                 <div class="card-tag">Web & Software</div>
                 <h3>Departamentos Cortázar</h3>
-                <p>Plataforma web interactiva desarrollada para la presentación, administración y gestión visual de la propiedad familiar.</p>
+                <p>Sitio web con fotos y recorrido virtual de los departamentos de
+   una propiedad familiar, para que los interesados los conozcan antes
+   de visitarlos.</p>
                 <div class="tech-stack">
                     <span>HTML5</span>
                     <span>CSS3</span>
@@ -293,43 +295,72 @@
         </div>
     </div>
 
-    <!-- 5. SECCIÓN CONTACTO (id="contact") -->
-    <section id="contact" class="section-container">
-        <div class="contact-header">
-            <span class="status-badge"><span class="status-dot"></span> Disponible para proyectos & colaboraciones</span>
-            <h2>Contacto Directo</h2>
-            <p>Hablemos de negocios, colaboraciones o cualquier proyecto en mente.</p>
+ <!-- =====================================================
+     CAMBIOS PARA TU index.html  (pégalos en este orden)
+     Busca "TU_" y reemplaza con tus datos reales.
+     ===================================================== -->
+
+
+<!-- =====================================================
+     CAMBIO 1: ARREGLAR EL HEADER
+     Te faltaba cerrar el <div class="nav-container">.
+     Reemplaza TODO tu <header> por este (ya incluye
+     el enlace nuevo a "Servicios").
+     ===================================================== -->
+<header class="navbar">
+    <div class="nav-container">
+        <a href="#hero" class="logo">Isai Cor<span>.</span></a>
+
+        <button class="menu-toggle" id="mobile-menu" aria-label="Abrir Menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Inicio</a></li>
+                <li><a href="#about" class="nav-link">Conóceme</a></li>
+                <li><a href="#timeline" class="nav-link">Trayectoria</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#services" class="nav-link">Servicios</a></li>
+                <li><a href="#contact" class="nav-link nav-cta-mobile">Contacto</a></li>
+            </ul>
+        </nav>
+    </div> <!-- ESTE CIERRE ES EL QUE FALTABA -->
+</header>
+
+<div class="contact-centered-wrapper">
+
+    <!-- Correo -->
+    <a href="mailto:TU_CORREO" class="contact-card">
+        <div class="contact-icon">✉️</div>
+        <div class="contact-details">
+            <span>Correo Electrónico</span>
+            <p>TU_CORREO</p>
         </div>
+    </a>
 
-        <div class="contact-centered-wrapper">
-            <!-- Correo -->
-            <a href="mailto:tu-correo@email.com" class="contact-card">
-                <div class="contact-icon">✉️</div>
-                <div class="contact-details">
-                    <span>Correo Electrónico</span>
-                    <p>tu-correo@email.com</p>
-                </div>
-            </a>
-
-            <!-- Instagram -->
-            <a href="https://instagram.com/tu-usuario" target="_blank" class="contact-card" rel="noopener noreferrer">
-                <div class="contact-icon">📸</div>
-                <div class="contact-details">
-                    <span>Instagram</span>
-                    <p>@tu-usuario</p>
-                </div>
-            </a>
-
-            <!-- WhatsApp -->
-            <a href="https://wa.me/5215500000000" target="_blank" class="contact-card" rel="noopener noreferrer">
-                <div class="contact-icon">💬</div>
-                <div class="contact-details">
-                    <span>WhatsApp</span>
-                    <p>Enviar Mensaje Directo</p>
-                </div>
-            </a>
+    <!-- Instagram -->
+    <a href="https://instagram.com/TU_USUARIO" target="_blank" class="contact-card" rel="noopener noreferrer">
+        <div class="contact-icon">📸</div>
+        <div class="contact-details">
+            <span>Instagram</span>
+            <p>@TU_USUARIO</p>
         </div>
-        </section>
+    </a>
+
+    <!-- WhatsApp con mensaje prellenado -->
+    <a href="https://wa.me/TU_NUMERO?text=Hola%20Isai%2C%20vi%20tu%20portafolio%20y%20me%20interesa%20cotizar%20un%20proyecto."
+       target="_blank" class="contact-card" rel="noopener noreferrer">
+        <div class="contact-icon">💬</div>
+        <div class="contact-details">
+            <span>WhatsApp</span>
+            <p>Escríbeme por WhatsApp</p>
+        </div>
+    </a>
+
+</div>
 
     <script src="script.js"></script>
 </body>
